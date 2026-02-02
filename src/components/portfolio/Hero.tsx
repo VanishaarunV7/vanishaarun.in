@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Sparkles, Code2, Database } from "lucide-react";
-import vanishaProfile from "@/assets/vanisha-profile.jpg";
+import { ArrowDown, Github, Linkedin, Mail, Sparkles, Code2, Database } from "lucide-react";
+import vanishaAvatar from "@/assets/vanisha-avatar.png";
 
 export const Hero = () => {
   return (
@@ -137,9 +137,9 @@ export const Hero = () => {
                 {/* Main image */}
                 <div className="relative w-full h-full rounded-full p-1.5 bg-gradient-to-br from-primary via-primary/50 to-accent">
                   <img
-                    src={vanishaProfile}
+                    src={vanishaAvatar}
                     alt="Vanisha Arun - Data Science Enthusiast"
-                    className="w-full h-full object-cover object-top rounded-full bg-background"
+                    className="w-full h-full object-cover rounded-full bg-background"
                   />
                 </div>
 
