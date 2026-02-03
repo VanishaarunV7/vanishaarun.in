@@ -32,6 +32,11 @@ const certifications = [
     issuer: "Deloitte",
     icon: "📈",
   },
+  {
+    title: "Data Visualization Using Python",
+    issuer: "Infosys Springboard",
+    icon: "📉",
+  },
 ];
 
 export const Certifications = () => {
