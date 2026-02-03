@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Github, Linkedin, Send, MapPin } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Send, MapPin, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
+const EMAILJS_SERVICE_ID = "service_xlab88k";
+const EMAILJS_TEMPLATE_ID = "template_qwzqccs";
+const EMAILJS_PUBLIC_KEY = "etpLnKCZIF3y6aSnq";
 
 const contactInfo = [
   {
@@ -34,20 +39,44 @@ const contactInfo = [
 
 export const Contact = () => {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this to a backend
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    
+    if (!formRef.current) return;
+    
+    setIsLoading(true);
+    
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+      
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -117,7 +146,7 @@ export const Contact = () => {
               Send a Message
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -127,6 +156,7 @@ export const Contact = () => {
                 </label>
                 <Input
                   id="name"
+                  name="from_name"
                   placeholder="John Doe"
                   value={formData.name}
                   onChange={(e) =>
@@ -146,6 +176,7 @@ export const Contact = () => {
                 </label>
                 <Input
                   id="email"
+                  name="from_email"
                   type="email"
                   placeholder="john@example.com"
                   value={formData.email}
@@ -166,6 +197,7 @@ export const Contact = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Your message here..."
                   rows={5}
                   value={formData.message}
@@ -180,10 +212,20 @@ export const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
+                disabled={isLoading}
                 className="w-full bg-primary hover:bg-primary/90"
               >
-                <Send className="mr-2" size={18} />
-                Send Message
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 animate-spin" size={18} />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2" size={18} />
+                    Send Message
+                  </>
+                )}
               </Button>
             </form>
           </div>
