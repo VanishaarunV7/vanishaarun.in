@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# 🌐 Personal Portfolio
 
-## Project info
+Welcome to my personal portfolio website!  
+This portfolio showcases my skills, projects, certifications, and interests in **Data Science, AI, and Machine Learning**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 👋 About Me
 
-There are several ways of editing your application.
+Hi, I'm **Vanisha Arun**, a passionate **Data Science Enthusiast** with a strong foundation in Computer Science.  
+I am focused on **AI, Machine Learning, Data Analytics**, and building real-world, impactful solutions using data.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Skills
 
-Changes made via Lovable will be committed automatically to this repo.
+- Programming: Python, SQL, R (Basic)
+- Data Science & ML: Data Analysis, Machine Learning Fundamentals
+- Tools & Platforms: Google AI Studio, Jupyter Notebook
+- Web Basics: HTML, CSS, JavaScript
+- Problem Solving & Logical Thinking
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📜 Certifications
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **NPTEL** – The Joy of Computing Using Python  
+- **HackerRank** – SQL (Basic), R (Basic)  
+- **GUVI** – Introduction to Big Data Engineering  
+- **Google AI Studio** – Building and Deploying Applications  
+- **Seminar** – *Legacy to Modern: Authentication Techniques in Cyber Security*  
+  (Kongunadu Engineering College)  
+- **Deloitte** – Data Analytics Job Simulation  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Projects
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+You can explore my projects directly on the portfolio or GitHub, including:
+- Data Analysis & Machine Learning projects  
+- AI-based systems  
+- Web and academic projects  
 
-# Step 3: Install the necessary dependencies.
-npm i
+👉 Visit the **Projects** section on my portfolio for more details.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 📫 Contact Me
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- GitHub: https://github.com/your-username  
+- LinkedIn: https://linkedin.com/in/your-profile  
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## ⭐ Acknowledgement
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Thank you for visiting my portfolio!  
+Feel free to explore my work and connect with me 🚀
