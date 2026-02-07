@@ -157,7 +157,7 @@ export const Contact = () => {
                 <Input
                   id="name"
                   name="from_name"
-                  placeholder="John Doe"
+                  placeholder="Your name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -178,7 +178,7 @@ export const Contact = () => {
                   id="email"
                   name="from_email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="you@example.com"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
