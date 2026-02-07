@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Sparkles, Code2, Database } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Sparkles, Code2, Database, Download } from "lucide-react";
 import vanishaAvatar from "@/assets/vanisha-avatar.png";
 
 export const Hero = () => {
@@ -82,6 +82,18 @@ export const Hero = () => {
                   <span className="relative z-10 flex items-center gap-2">
                     View Projects
                     <Code2 className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                  </span>
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="group relative overflow-hidden bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent text-accent-foreground px-8 shadow-lg shadow-accent/25 transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5"
+              >
+                <a href="/assets/Vanisha_Arun_Resume.pdf" download="Vanisha_Arun_Resume.pdf">
+                  <span className="relative z-10 flex items-center gap-2">
+                    <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                    Download Resume
                   </span>
                 </a>
               </Button>
