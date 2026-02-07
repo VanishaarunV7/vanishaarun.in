@@ -2,6 +2,7 @@
 
 Welcome to my personal portfolio website!  
 This portfolio showcases my skills, projects, certifications, and interests in **Data Science, AI, and Machine Learning**.
+live link: https://vanisha.lovable.app/
 
 ---
 
