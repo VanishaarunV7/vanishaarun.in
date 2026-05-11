@@ -174,7 +174,7 @@ export const Hero = () => {
                       <Database className="w-4 h-4 text-accent-foreground" />
                     </div>
                     <div>
-                      <span className="text-xl font-bold text-foreground">2</span>
+                      <span className="text-xl font-bold text-foreground">3</span>
                       <span className="text-xs text-muted-foreground block leading-tight">Internships</span>
                     </div>
                   </div>
