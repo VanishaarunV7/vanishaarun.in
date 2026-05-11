@@ -1,30 +1,59 @@
-const skills = [
-  { name: "Python", level: 90, category: "Programming" },
-  { name: "SQL", level: 85, category: "Programming" },
-  { name: "Machine Learning", level: 80, category: "Data Science" },
-  { name: "NumPy", level: 85, category: "Libraries" },
-  { name: "Pandas", level: 85, category: "Libraries" },
-  { name: "Matplotlib", level: 80, category: "Libraries" },
-  { name: "Data Analysis", level: 85, category: "Data Science" },
-  { name: "Data Visualization", level: 80, category: "Data Science" },
+import { SiPython, SiMysql, SiHtml5, SiCss3, SiNumpy, SiPandas, SiScikitlearn, SiJupyter, SiGit, SiGithub, SiR } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { BarChart3, Brain, LineChart, Sigma } from "lucide-react";
+import type { ComponentType } from "react";
+
+type IconType = ComponentType<{ className?: string }>;
+
+const skills: { name: string; level: number; icon: IconType; color: string }[] = [
+  { name: "Python", level: 90, icon: SiPython, color: "#3776AB" },
+  { name: "SQL", level: 85, icon: SiMysql, color: "#4479A1" },
+  { name: "Machine Learning", level: 80, icon: Brain, color: "#FF6F00" },
+  { name: "NumPy", level: 85, icon: SiNumpy, color: "#013243" },
+  { name: "Pandas", level: 85, icon: SiPandas, color: "#150458" },
+  { name: "Matplotlib", level: 80, icon: BarChart3, color: "#11557C" },
+  { name: "Data Analysis", level: 85, icon: LineChart, color: "#0EA5E9" },
+  { name: "Data Visualization", level: 80, icon: Sigma, color: "#8B5CF6" },
 ];
 
-const skillCategories = [
+const skillCategories: { title: string; skills: { name: string; icon: IconType; color: string }[] }[] = [
   {
     title: "Programming Languages",
-    skills: ["Python", "SQL", "HTML/CSS"],
+    skills: [
+      { name: "Python", icon: SiPython, color: "#3776AB" },
+      { name: "SQL", icon: SiMysql, color: "#4479A1" },
+      { name: "R", icon: SiR, color: "#276DC3" },
+      { name: "HTML", icon: SiHtml5, color: "#E34F26" },
+      { name: "CSS", icon: SiCss3, color: "#1572B6" },
+    ],
   },
   {
     title: "Data Science & ML",
-    skills: ["Machine Learning", "Data Analysis", "Statistical Modeling", "Data Visualization"],
+    skills: [
+      { name: "Machine Learning", icon: Brain, color: "#FF6F00" },
+      { name: "Data Analysis", icon: LineChart, color: "#0EA5E9" },
+      { name: "Statistical Modeling", icon: Sigma, color: "#8B5CF6" },
+      { name: "Data Visualization", icon: BarChart3, color: "#11557C" },
+    ],
   },
   {
     title: "Python Libraries",
-    skills: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "Seaborn"],
+    skills: [
+      { name: "NumPy", icon: SiNumpy, color: "#013243" },
+      { name: "Pandas", icon: SiPandas, color: "#150458" },
+      { name: "Matplotlib", icon: BarChart3, color: "#11557C" },
+      { name: "Scikit-learn", icon: SiScikitlearn, color: "#F7931E" },
+      { name: "Seaborn", icon: LineChart, color: "#4C72B0" },
+    ],
   },
   {
     title: "Tools & Technologies",
-    skills: ["Jupyter Notebook", "Git", "GitHub", "VS Code"],
+    skills: [
+      { name: "Jupyter Notebook", icon: SiJupyter, color: "#F37626" },
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, color: "#181717" },
+      { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+    ],
   },
 ];
 
@@ -46,20 +75,26 @@ export const Skills = () => {
         {/* Skills with Progress Bars */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="grid md:grid-cols-2 gap-6">
-            {skills.map((skill) => (
-              <div key={skill.name} className="bg-card rounded-xl p-5 card-shadow">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="font-semibold text-foreground">{skill.name}</span>
-                  <span className="text-sm text-primary font-medium">{skill.level}%</span>
+            {skills.map((skill) => {
+              const Icon = skill.icon;
+              return (
+                <div key={skill.name} className="bg-card rounded-xl p-5 card-shadow">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="font-semibold text-foreground flex items-center gap-2">
+                      <Icon className="w-5 h-5" style={{ color: skill.color }} />
+                      {skill.name}
+                    </span>
+                    <span className="text-sm text-primary font-medium">{skill.level}%</span>
+                  </div>
+                  <div className="h-2 bg-muted rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
                 </div>
-                <div className="h-2 bg-muted rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -74,14 +109,18 @@ export const Skills = () => {
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {category.skills.map((skill) => {
+                  const Icon = skill.icon;
+                  return (
+                    <span
+                      key={skill.name}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                    >
+                      <Icon className="w-4 h-4" style={{ color: skill.color }} />
+                      {skill.name}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           ))}
