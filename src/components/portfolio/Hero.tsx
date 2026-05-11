@@ -162,7 +162,7 @@ export const Hero = () => {
                       <Code2 className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <div>
-                      <span className="text-xl font-bold text-foreground">4+</span>
+                      <span className="text-xl font-bold text-foreground">5+</span>
                       <span className="text-xs text-muted-foreground block leading-tight">Projects</span>
                     </div>
                   </div>
