@@ -1,9 +1,9 @@
-import { SiPython, SiMysql, SiHtml5, SiCss3, SiNumpy, SiPandas, SiScikitlearn, SiJupyter, SiGit, SiGithub, SiR } from "react-icons/si";
+import { SiPython, SiMysql, SiHtml5, SiCss, SiNumpy, SiPandas, SiScikitlearn, SiJupyter, SiGit, SiGithub, SiR } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { BarChart3, Brain, LineChart, Sigma } from "lucide-react";
-import type { ComponentType } from "react";
+import type { CSSProperties, ComponentType } from "react";
 
-type IconType = ComponentType<{ className?: string }>;
+type IconType = ComponentType<{ className?: string; style?: CSSProperties }>;
 
 const skills: { name: string; level: number; icon: IconType; color: string }[] = [
   { name: "Python", level: 90, icon: SiPython, color: "#3776AB" },
