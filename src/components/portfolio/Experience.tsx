@@ -1,23 +1,56 @@
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Briefcase, MapPin } from "lucide-react";
+import { SiJavascript } from "react-icons/si";
+import { FaJava, FaDatabase, FaGlobe } from "react-icons/fa";
+import type { CSSProperties, ComponentType } from "react";
 
-const experiences = [
+type IconType = ComponentType<{ className?: string; style?: CSSProperties }>;
+
+const experiences: {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+  skills: { name: string; icon: IconType; color: string }[];
+}[] = [
   {
-    title: "Intern",
+    title: "Web Systems Intern",
     company: "Chennai Metro Rail Limited",
     location: "Chennai",
-    period: "Internship",
+    period: "Jan 2026",
     description:
-      "Gained exposure to real-world applications of technology in transportation systems. Learned about data management practices and operational efficiency in a large-scale public infrastructure project.",
-    skills: ["Data Management", "Technical Documentation", "Process Analysis"],
+      "Worked on web-based systems supporting metro operations. Contributed to the development and maintenance of internal web applications, focusing on usability and reliability.",
+    skills: [
+      { name: "HTML/CSS", icon: FaGlobe, color: "#E34F26" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "Web Development", icon: FaGlobe, color: "#0EA5E9" },
+    ],
   },
   {
-    title: "Intern",
+    title: "Data Science Intern",
+    company: "Chennai Metro Rail Limited",
+    location: "Chennai",
+    period: "Jun 2025",
+    description:
+      "Applied data science techniques to analyze metro operational data. Built data pipelines, performed exploratory analysis, and contributed to dashboards supporting decision-making.",
+    skills: [
+      { name: "Python", icon: FaDatabase, color: "#3776AB" },
+      { name: "Data Analysis", icon: FaDatabase, color: "#0EA5E9" },
+      { name: "SQL", icon: FaDatabase, color: "#4479A1" },
+    ],
+  },
+  {
+    title: "Full Stack Java Intern",
     company: "Appin Technology",
     location: "Coimbatore",
-    period: "Internship",
+    period: "Dec 2024",
     description:
-      "Developed practical experience in technology applications and software development. Enhanced programming skills and gained insights into industry-standard development practices.",
-    skills: ["Software Development", "Programming", "Technical Training"],
+      "Built full stack applications using Java for backend services along with modern frontend technologies. Gained hands-on experience in building, testing, and deploying end-to-end web applications.",
+    skills: [
+      { name: "Java", icon: FaJava, color: "#007396" },
+      { name: "Full Stack", icon: FaGlobe, color: "#22C55E" },
+      { name: "Backend", icon: FaDatabase, color: "#6366F1" },
+    ],
   },
 ];
 
@@ -79,14 +112,18 @@ export const Experience = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+                      {exp.skills.map((skill) => {
+                        const Icon = skill.icon;
+                        return (
+                          <span
+                            key={skill.name}
+                            className="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full"
+                          >
+                            <Icon className="w-4 h-4" style={{ color: skill.color }} />
+                            {skill.name}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
