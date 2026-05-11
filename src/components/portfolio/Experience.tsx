@@ -112,14 +112,18 @@ export const Experience = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+                      {exp.skills.map((skill) => {
+                        const Icon = skill.icon;
+                        return (
+                          <span
+                            key={skill.name}
+                            className="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 text-accent-foreground text-sm font-medium rounded-full"
+                          >
+                            <Icon className="w-4 h-4" style={{ color: skill.color }} />
+                            {skill.name}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
