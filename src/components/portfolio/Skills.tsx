@@ -24,7 +24,7 @@ const skillCategories: { title: string; skills: { name: string; icon: IconType; 
       { name: "SQL", icon: SiMysql, color: "#4479A1" },
       { name: "R", icon: SiR, color: "#276DC3" },
       { name: "HTML", icon: SiHtml5, color: "#E34F26" },
-      { name: "CSS", icon: SiCss3, color: "#1572B6" },
+      { name: "CSS", icon: SiCss, color: "#1572B6" },
     ],
   },
   {
