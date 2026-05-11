@@ -46,6 +46,10 @@ export const Hero = () => {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             {/* Animated badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm border border-primary/20 text-primary rounded-full text-sm font-medium mb-6 animate-fade-in">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+              </span>
               <Sparkles className="w-4 h-4" />
               <span>Open to Internship Opportunities</span>
             </div>
