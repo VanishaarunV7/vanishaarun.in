@@ -37,6 +37,16 @@ const certifications = [
     issuer: "Infosys Springboard",
     icon: "📉",
   },
+  {
+    title: "NEXGEN 48 Hours Hackathon",
+    issuer: "Hindustan College of Engineering and Technology",
+    icon: "🏆",
+  },
+  {
+    title: "Advanced Data Visualization Tools",
+    issuer: "L&T Edutech",
+    icon: "📊",
+  },
 ];
 
 export const Certifications = () => {
