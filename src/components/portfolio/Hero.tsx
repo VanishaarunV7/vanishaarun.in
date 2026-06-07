@@ -71,8 +71,9 @@ export const Hero = () => {
             </h2>
 
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-8 animate-slide-up leading-relaxed">
-              A passionate 3rd-year CSE student transforming raw data into meaningful insights. 
-              Building intelligent solutions with Python, ML, and a drive for innovation.
+              Final Year Computer Science and Engineering student actively building projects,
+              completing internships, and preparing for a professional software development career
+              in AI, Data Analytics, and Full-Stack Development.
             </p>
 
             {/* CTA Buttons */}
