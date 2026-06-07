@@ -3,34 +3,34 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Titanic Dataset Analysis",
+    title: "AI-Based Exam Monitoring System",
     description:
-      "Comprehensive data analysis and machine learning project based on the famous Titanic dataset. Applied data preprocessing, exploratory data analysis, and predictive modeling techniques.",
-    tech: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
+      "AI-powered online examination monitoring system featuring student activity tracking, suspicious behavior detection, and automated proctoring using computer vision techniques.",
+    tech: ["Artificial Intelligence", "Computer Vision", "Python", "Web Development"],
     github: "https://github.com/VanishaarunV7",
     color: "from-primary to-cyan-500",
   },
   {
-    title: "AI-Based Exam Monitoring System",
+    title: "Uber Ride History Analysis",
     description:
-      "An AI-powered system designed to monitor exams using intelligent surveillance techniques. Implements computer vision and machine learning for automated proctoring.",
-    tech: ["Python", "OpenCV", "Machine Learning", "AI"],
+      "Data analytics project analyzing Uber ride history to uncover insights on travel patterns, ride frequency, distances, peak travel times, and overall user behavior.",
+    tech: ["Data Analysis", "Python", "Pandas", "Data Visualization"],
     github: "https://github.com/VanishaarunV7",
     color: "from-accent to-orange-500",
   },
   {
     title: "Google Pay Expense Sharing System",
     description:
-      "A practical project to manage and split expenses efficiently among groups. Features expense tracking, bill splitting, and balance calculations.",
-    tech: ["Python", "Data Structures", "Algorithms"],
+      "Smart expense-sharing application inspired by Google Pay group payments. Lets users track shared expenses, split bills, manage balances, and view full transaction history.",
+    tech: ["Web Development", "Database Management", "JavaScript", "UX Design"],
     github: "https://github.com/VanishaarunV7",
     color: "from-emerald-500 to-teal-500",
   },
   {
-    title: "Event Management HTML Project",
+    title: "AI-Based Smart Surveillance System",
     description:
-      "A responsive front-end event management website built with modern HTML and CSS. Features clean design and intuitive user interface for managing events.",
-    tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      "Intelligent surveillance solution using AI and Computer Vision to detect unusual activities, monitor environments in real time, and enhance security with automated alerts.",
+    tech: ["Artificial Intelligence", "Image Processing", "OpenCV", "Security"],
     github: "https://github.com/VanishaarunV7",
     color: "from-violet-500 to-purple-500",
   },

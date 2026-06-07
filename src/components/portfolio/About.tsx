@@ -43,7 +43,7 @@ export const About = () => {
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Hello! I'm <span className="text-foreground font-semibold">Vanisha Arun</span>,
-              a final-year Computer Science and Engineering student, Namakkal. My journey
+              a Final Year Computer Science and Engineering student, Namakkal. My journey
               into the world of data science began with a simple curiosity about how data
               can tell stories and drive decisions.
             </p>
