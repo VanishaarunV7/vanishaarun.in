@@ -42,11 +42,10 @@ export const About = () => {
           {/* Left - About Text */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm <span className="text-foreground font-semibold">Vanisha Arun</span>,
-              a dedicated 3rd-year Computer Science Engineering student at Excel
-              Engineering College, Namakkal. My journey into the world of data science
-              began with a simple curiosity about how data can tell stories and drive
-              decisions.
+              Hello! I'm <span className="text-foreground font-semibold">Vanisha Arun</span>,
+              a final-year Computer Science and Engineering student, Namakkal. My journey
+              into the world of data science began with a simple curiosity about how data
+              can tell stories and drive decisions.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Through my academic journey and internships at Chennai Metro Rail Limited
@@ -58,7 +57,9 @@ export const About = () => {
               As an aspiring Data Analyst, I'm actively seeking internship opportunities
               where I can apply my skills, learn from industry experts, and contribute
               to impactful projects. I believe in continuous learning and staying updated
-              with the latest trends in data science and AI.
+              with the latest trends in data science and AI. I am currently seeking
+              opportunities to apply my knowledge, gain industry experience, and
+              contribute to innovative technology solutions.
             </p>
 
             {/* Quick Stats */}
