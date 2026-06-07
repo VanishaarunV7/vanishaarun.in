@@ -72,8 +72,8 @@ export const Hero = () => {
 
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-8 animate-slide-up leading-relaxed">
               Final Year Computer Science and Engineering student actively building projects,
-              completing internships, and preparing for a professional software development career
-              in AI, Data Analytics, and Full-Stack Development.
+              completing internships, and preparing for a data science career using Python,
+              AI, and Data Analytics.
             </p>
 
             {/* CTA Buttons */}
